@@ -120,6 +120,10 @@ body {
   font-size: 16px;
 }
 
+h2 {
+  color: #D4C17F;
+}
+
 a {
   color: #fff;
   transition: color 0.2s ease-in;
@@ -235,4 +239,78 @@ a:hover {
   font-size: 20px;
   line-height: 1.35;
   font-weight: 300;
+}
+
+.appartments__title {
+  font-size: 36px;
+  font-family: "Playfair Display Bold", serif;
+  margin-bottom: 88px;
+}
+
+.appartments__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.appartments__card {
+  display: block;
+  width: 540px;
+  height: 320px;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+.appartments__card::before {
+  content: "";
+  position: absolute;
+  z-index: 6;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(36, 43, 51, 0) 0%, #242b33 100%);
+}
+.appartments__card::after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  z-index: 7;
+  left: 15px;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 3px double rgba(255, 255, 255, 0.4);
+  transition: opacity 0.2s ease-in;
+}
+.appartments__card:hover::after {
+  opacity: 1;
+}
+.appartments__card:hover {
+  color: #fff;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.2s ease-in;
+  position: relative;
+  z-index: 5;
+}
+
+.appartments__card:hover .card__image {
+  transform: scale(1.1);
+  filter: contrast(110%) brightness(1.2) saturate(1.2);
+}
+
+.card__title {
+  position: absolute;
+  z-index: 9;
+  font-size: 24px;
+  font-family: "Raleway Regular", sans-serif;
+  left: 50px;
+  right: 20px;
+  bottom: 44px;
 }/*# sourceMappingURL=style.css.map */
