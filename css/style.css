@@ -112,4 +112,127 @@ legend {
   src: url("../fonts/PlayfairDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay-Bold.woff") format("woff"), url("../fonts/PlayfairDisplay-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+body {
+  font-family: "Raleway Regular", sans-serif;
+  background-color: #242b33;
+  color: #fff;
+  font-size: 16px;
+}
+
+a {
+  color: #fff;
+  transition: color 0.2s ease-in;
+}
+a:hover {
+  color: #D4C17F;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1140px;
+}
+.container--sm {
+  max-width: 824px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 840px;
+  padding-top: 30px;
+  padding-bottom: 75px;
+  background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%), url(./../img/header/header-bg.jpg);
+}
+
+.header__top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  text-align: center;
+  color: #D4C17F;
+  font-size: 48px;
+  padding-bottom: 121px;
+  font-family: "Playfair Display Bold", serif;
+  font-weight: 700px;
+  position: relative;
+}
+
+.header__title-icon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.info {
+  position: relative;
+  font-size: 18px;
+}
+.info--tel, .info--map {
+  padding-left: 35px;
+}
+.info--tel::before, .info--map::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+}
+.info--map::before {
+  background-image: url(./../img/header/map.svg);
+}
+.info--tel::before {
+  background-image: url(./../img/header/phone.svg);
+}
+
+.nav {
+  font-size: 14px;
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 40px;
+}
+
+.benefits__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 0;
+  column-gap: 70px;
+}
+
+.benefits__item {
+  text-align: center;
+}
+
+.benefits__item-image {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 53px;
+}
+
+.benefits__item-text {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */

@@ -34,21 +34,3 @@
     font-weight: normal;
     font-style: normal;
     }
-
-
-@mixin bold{
-    font-family: 'Raleway Bold', sans-serif;
-}
-
-@mixin regular{
-    font-family: 'Raleway Regular', sans-serif;
-}
-
-@mixin light{
-    font-family: 'Roboto Light', sans-serif;
-}
-
-@mixin playBold{
-    font-family: 'Playfair Display Bold', sans-serif;
-}
-
