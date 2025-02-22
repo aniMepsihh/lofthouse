@@ -71,3 +71,19 @@ function init(){
     myPlacemark.balloon.open();
 
 }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function (e) {
+	  e.preventDefault(); // Отменяем стандартное поведение ссылки
+  
+	  const targetId = this.getAttribute('href'); // Получаем ID целевого блока
+	  const targetElement = document.querySelector(targetId); // Находим целевой блок
+  
+	  if (targetElement) {
+		targetElement.scrollIntoView({
+		  behavior: 'smooth', // Плавный скролл
+		  block: 'start'      // Выравнивание по верхней границе
+		});
+	  }
+	});
+  });
