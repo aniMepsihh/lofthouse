@@ -1,6 +1,16 @@
 .cta {
     padding: 180px 0;  
-    background-image: url(./../img/cta/cta-bg.jpg);    
+    background: linear-gradient(
+			180deg,
+			$dark 10.42%,
+			rgba(36, 43, 51, 0) 50.52%,
+			$dark 90.1%
+		),
+		linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)),
+		url('./../img/cta/cta-bg.jpg'), #c4c4c4;   
+        @include mediaTabled {
+	        padding: 60px 0;
+        } 
 }
 .cta__title {
     font-size: 36px;
@@ -12,16 +22,29 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    @include mediaTabled {
+        grid-template-columns: 1fr;
+    }
 }
 
 .cta__text{
     line-height: 1.5;
+    p + p {
+        margin-top: 1em;
+    }
+
+    @include mediaTabled {
+        font-size: 14px;
+    }
 }
 
 .cta__form{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 35px 30px;  
+    @include mediaTabled {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -45,6 +68,11 @@
     color: $privacy;
     text-align: center;
     line-height: 1.23;
+    &--bottom {
+        @include mediaTabled {
+            grid-row: 4 / 5;
+        }
+    }
 }
 .form__button {
     height: 50px;

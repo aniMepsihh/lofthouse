@@ -2,10 +2,16 @@
     margin-bottom: 38px;
     font-size: 36px;
     font-family: $font-accent;
+    @include mediaTabled {
+		margin-bottom: 19px;
+	}
 }
 
 .feetback {
     padding-bottom: 180px;
+    @include mediaTabled {
+		padding-bottom: 90px;
+	}
 }
 
 .feetback__form {
@@ -13,4 +19,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     align-items: center;
+    @include mediaTabled {
+	    grid-template-columns: 1fr;
+	}
 }
